@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --very-dark-blue-mainBG: hsl(217, 54%, 11%);
+    --very-dark-blue-cardBG: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --card-background-shadow: hsl(212,58%,11%);
+
+    --my-line-color: hsl(213, 20%,50%);
+    --very-light-sky-blue: hsl(181, 84%, 56%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+   
+    margin: 0;
+    background-color: var(--very-dark-blue-mainBG);
+
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 45rem;
+    max-width: 45rem;
+
+
+    background-color: var(--card-background-shadow);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card{
+    width: 70%;
+    margin: 2rem 0 6rem 0;
+    background-color: var(--very-dark-blue-cardBG);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+   
+}
+
+.information-card{
+    width: 90%;
+    margin: 2rem;
+    border-radius:0.8rem;
+
+    font-size: 1.8rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.image-div{
+    width: 100%;
+    line-height: 0;
+    position: relative;
+}
+
+.image-div img{
+    width: 100%;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.image-overlay{
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width:100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 0.8rem;
+    overflow: hidden; 
+}
+
+.image-overlay img{
+    position: absolute;
+    width: 5rem;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-div:hover .image-overlay{
+    display: block;
+    cursor: pointer;
+}
+
+
+.text{
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.text a{
+    font-size: 2.2rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.text a:hover{
+    color:var(--very-light-sky-blue);
+}
+
+.text p{
+    color: var(--very-dark-blue-line);
+    color: var(--my-line-color);
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.plan-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.plan-card div{
+    display: flex;
+    align-items: center;
+}
+
+.plan-card div img{
+    height: 50%;
+}
+
+.plan-card div p{
+    margin-left: 0.8rem;
+}
+
+.value-price-crypto{
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--very-light-sky-blue);
+}
+
+.time-remaining{
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--my-line-color);
+}
+
+hr{
+   border-color: var(--my-line-color);
+}
+
+.creator-information{
+    display: flex;
+    margin-top: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.creator-information img{
+    width: 3rem;
+    border: 0.1rem solid var(--white);
+    border-radius: 2.5rem;
+}
+
+.creator-information p{
+    margin-left: 1.6rem;
+    font-size: 1.4rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    color: var(--my-line-color);
+}
+
+.creator-information p a{
+    font-weight: 600;
+    color:var(--white);
+    text-decoration: none;
+}
+
+.creator-information p a:hover{
+    color:var(--very-light-sky-blue);
+}
+
+@media only screen and (max-width:37.5rem){
+    .body{  
+        font-size: 1.4rem;
+        min-height: 100vh;
+    }
+
+    .container{
+        width: 95%;
+        left: 50%;
+        top: 50%;
+    }
+
+    .card{
+        width: 80%;
+    }
+
+    .text a{
+        font-size: 1.8rem;
+    }
+
+    .text p{
+        font-size: 1.4rem;
+    }
+
+    .value-price-crypto{
+        font-size: 1.3rem; 
+    }
+
+    .time-remaining{
+        font-size: 1.3rem;
+    }
+
+   .creator-information{
+    margin-bottom: 1rem;
+   }
+
+    .creator-information p{
+        font-size: 1.4rem;
+        
+    }
+}
